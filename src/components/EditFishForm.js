@@ -16,7 +16,10 @@ class EditFishForm extends React.Component {
   handleChange = event => {
     const updatedFish = {
       ...this.props.fish,
-      [event.currentTarget.name]: event.currentTarget.value
+      [event.currentTarget.name]:
+        event.currentTarget.name === 'price'
+          ? parseFloat(event.currentTarget.value)
+          : event.currentTarget.value
     };
     this.props.updateFish(this.props.index, updatedFish);
   };
