@@ -352,8 +352,10 @@ header.top h3:after {
   overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
-    background: transparent;  /* optional: just make scrollbar invisible */
+  /* remove scrollbar space */
+  width: 0px;
+  /* make scrollbar invisible */
+  background: transparent;
 }
 .catch-of-the-day > *:first-child {
   -ms-flex-negative: 1;
