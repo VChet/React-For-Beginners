@@ -349,13 +349,6 @@ header.top h3:after {
   -webkit-box-shadow: 0 5px 5px rgba(0,0,0,0.1);
           box-shadow: 0 5px 5px rgba(0,0,0,0.1);
   overflow: scroll;
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  /* remove scrollbar space */
-  width: 0px;
-  /* make scrollbar invisible */
-  background: transparent;
 }
 .catch-of-the-day > *:first-child {
   -ms-flex-negative: 1;
@@ -379,6 +372,10 @@ header.top h3:after {
       flex-basis: 50%;
   -webkit-transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08) translateX(24px);
           transform: translateX(-50%) rotateY(10deg) translateX(50%) scale(1.08) translateX(24px);
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 input#fold:not(:checked) ~ #main .catch-of-the-day > * {
   -webkit-transform: none;
