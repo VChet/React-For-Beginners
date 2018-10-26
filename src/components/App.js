@@ -63,16 +63,16 @@ class App extends React.Component {
     fishes[key] = updatedFish;
     // 3. Set that to state
     this.setState({ fishes });
-  }
+  };
 
-  deleteFish = (key) => {
+  deleteFish = key => {
     // 1. Take a copy of state
     const fishes = { ...this.state.fishes };
     // 2. Update the state
     fishes[key] = null;
     // 3. Update state
     this.setState({ fishes });
-  }
+  };
 
   addToOrder = key => {
     // 1. Take a copy of state
@@ -90,7 +90,7 @@ class App extends React.Component {
     delete order[key];
     // 3. Call setState to update our state object
     this.setState({ order });
-  }
+  };
 
   render() {
     return (

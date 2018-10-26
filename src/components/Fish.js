@@ -12,7 +12,7 @@ class Fish extends React.Component {
       price: PropTypes.number
     }),
     addToOrder: PropTypes.func
-  }
+  };
   render() {
     const { image, name, price, desc, status } = this.props.details;
     const isAvailable = status === "available";
@@ -24,9 +24,14 @@ class Fish extends React.Component {
           <span className="price">{formatPrice(price)}</span>
         </h3>
         <p>{desc}</p>
-        <button disabled={!isAvailable} onClick={() => this.props.addToOrder(this.props.index)}>{isAvailable ? "Add To Cart" : "Sold Out!"}</button>
+        <button
+          disabled={!isAvailable}
+          onClick={() => this.props.addToOrder(this.props.index)}
+        >
+          {isAvailable ? "Add To Order" : "Sold Out!"}
+        </button>
       </li>
-    )
+    );
   }
 }
 
