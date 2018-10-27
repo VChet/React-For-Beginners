@@ -33,7 +33,7 @@ class Inventory extends React.Component {
     console.log(store);
     // 2. Claim it if there is no owner
     if (!store.owner) {
-      // save is as our own
+      // save it as our own
       await base.post(`${this.props.storeId}/owner`, {
         data: authData.user.uid
       });

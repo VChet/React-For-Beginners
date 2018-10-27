@@ -1,5 +1,5 @@
-import Rebase from 're-base';
-import firebase from 'firebase';
+import Rebase from "re-base";
+import firebase from "firebase";
 
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyASlM5frJuXr1UwHQzN9a5DdzoZgvh18l8",
@@ -7,7 +7,7 @@ const firebaseApp = firebase.initializeApp({
   databaseURL: "https://catch-of-the-day-3bca7.firebaseio.com"
 });
 
-const base = Rebase.createClass(firebase.database());
+const base = Rebase.createClass(firebaseApp.database());
 
 export { firebaseApp };
 

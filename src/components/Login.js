@@ -13,6 +13,6 @@ const Login = props => (
 
 Login.propTypes = {
   authenticate: PropTypes.func.isRequired
-}
+};
 
 export default Login;
